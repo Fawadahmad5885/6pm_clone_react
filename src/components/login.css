@@ -1,0 +1,234 @@
+/* Reset styles */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Box container */
+.box {
+    margin-top: 15px;
+    width: 51vh;
+    height: 64.4vh;
+    border: 0.5px solid #8d8c8c;
+    border-radius: 5px;
+}
+
+/* Box contents */
+.box_contents {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sign-In header */
+h2 {
+    margin: auto;
+    margin-top: 6%;
+    margin-left: 7.5%;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+/* User form styles */
+.user_form {
+    margin-top: 12.6px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 7.4%;
+}
+
+/* Input fields for email */
+.Input_email {
+    font-size: 13px;
+    text-align: left;
+    line-height: 3.1vh;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.Input_email .input_email {
+    width: 101.5%;
+    height: 2.4vh;
+    padding: 5px;
+    border: 1.8px solid #8d8c8c;
+    border-radius: 4px;
+}
+
+/* Forgot password link */
+.password_forgot {
+    position: absolute;
+    margin: auto;
+    font-weight: 100;
+    margin-left: 21.6vh;
+    color: #000;
+}
+
+/* Input fields for password */
+.Input_password {
+    margin-top: 12px;
+    font-size: 13px;
+    text-align: left;
+    line-height: 3.1vh;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.Input_password .input_password {
+    width: 101.5%;
+    height: 2.4vh;
+    padding: 5px;
+    border: 1.8px solid #8d8c8c;
+    border-radius: 4px;
+}
+
+/* Sign-In button */
+.btn {
+    padding: 6.6px;
+    margin-top: 2.8vh;
+    width: 106%;
+    font-weight: bold;
+    color: #fff;
+    background-color: #a64941;
+    border: 2px solid #a94b43;
+    border-radius: 4px;
+}
+
+/* Checkbox and related styles */
+.check-box {
+    font-size: 1.7vh;
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 7%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2px;
+}
+
+.details_and_icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.details {
+    text-decoration: none;
+    color: #000;
+    margin-left: 2px;
+}
+
+.details:hover {
+    text-decoration: underline;
+}
+
+.down_arrow {
+    font-size: 7px;
+    margin-left: 7.5px;
+    color: #797878;
+    margin-top: -1px;
+}
+
+/* More sign-in options and related styles */
+.more_option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lines {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4.1vh;
+    align-items: center;
+    margin-left: -4px;
+    font-size: 12px;
+}
+
+.line {
+    height: 0.3px;
+    width: 75%;
+    background-color: #e0e0e0;
+}
+
+.p {
+    width: 300px;
+    color: #827f7f;
+}
+
+.amazon_button {
+    margin-top: 1.7vh;
+    align-items: center;
+    border: 0.03px solid #b4b1b1;
+    border-radius: 3px;
+    text-shadow: 0 0 1px;
+    padding: 6px 12px;
+    background-image: linear-gradient(rgb(250, 248, 248) 50%, rgb(229, 229, 229) 70%);
+}
+
+.amazon_signIn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.amazon_icon {
+    color: #000000;
+    font-size: 2.5vh;
+    margin-right: 7px;
+    opacity: 0.8;
+}
+
+.btn_text {
+    font-family: sans-serif;
+    text-decoration: none;
+    margin-left: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.8;
+    color: #000;
+    letter-spacing: 0.1px;
+}
+
+.lines_2nd {
+    margin-top: 3vh;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lines_2nd .p2 {
+    width: 220px;
+    color: #827f7f;
+}
+
+.btn2 {
+    position: relative;
+    align-items: center;
+    width: 85%;
+    padding: 6.3px;
+    margin-top: 1.8vh;
+    margin-bottom: 2.6vh;
+    border: 2px solid #a94b43;
+    border-radius: 4px;
+    color: #a94b43;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.error-message{
+    color: #db4335;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+
+
+
+
+
