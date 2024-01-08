@@ -2,7 +2,7 @@ import React from 'react'
 import './header.css'
 const Header = () => {
     return (
-        <div className='header-img'>
+        <div className='header'>
             <img
                 className="backGround_img"
                 src="https://m.media-amazon.com/images/G/01/6pm/logos/6pm-Logo-1x._CB485946284_.png"

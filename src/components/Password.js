@@ -1,10 +1,16 @@
 import React from 'react'
-import './password.css'
+import styles from './password.module.css'
 // import styles from './components/Password.module.css';
 const Password = () => {
   return (
-    <div className='box2'>
-      <h2 className='box_header'>Password assistance</h2>
+    <div className={styles.box}>
+    
+      <h1 className={styles.box_header}>Password assistance</h1>
+      <p className={styles.box_para}>Enter the email address associated with your 6pm account, then click Continue.</p>
+
+      <div className={styles.InputEmail}>
+        <label htmlFor='email' className={styles.email}>Email</label>
+      </div>
     </div>
   )
 }

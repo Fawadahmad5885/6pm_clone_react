@@ -2,6 +2,12 @@
 
 
 /* Header image */
-.header-img {
-    margin-top: 13.5px;
+.header{
+    width: 100%;
+    justify-content: center;
+}
+img{
+    margin-top: 13px;
+    align-items: center;
+    max-width: 100%;
 }

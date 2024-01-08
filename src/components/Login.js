@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BiSolidDownArrow } from "react-icons/bi";
 import { GrAmazon } from "react-icons/gr";
 import { Link, useNavigate } from 'react-router-dom';
-import './login.css';
+import   './login.css';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -42,7 +42,7 @@ const Login = () => {
     }
 
     return (
-        <div className='box' style={{ height: boxHeight }}>
+        <div className= 'box' style={{ height: boxHeight }}>
             <div className='box_contents'>
                 <h2>Sign-In</h2>
 
