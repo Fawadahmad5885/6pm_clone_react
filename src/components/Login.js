@@ -13,7 +13,6 @@ const Login = () => {
 
     const navigate = useNavigate();
 
-
     const handleSignIn = () => {
 
         if (email === '') {
