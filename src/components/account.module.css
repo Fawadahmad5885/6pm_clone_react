@@ -1,0 +1,37 @@
+.Box {
+    margin-top: 13px;
+    background-color: rgb(227, 244, 244);
+    border: 1px solid #000;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 16px 16px;
+}
+
+.Box h2 {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0;
+    margin-right: 100px;
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.Box .user_form{
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+}
+.Box label{
+    font-size: 13px;
+    font-weight: bold ;
+    margin-bottom: 4px;
+}
+.input{
+    margin-bottom: 10px;
+    width: 40vh;
+    height: 24px;
+    border: 1.5px solid #7d7b7b;
+    border-radius: 3px;
+}

@@ -1,13 +1,8 @@
 /* Body styles */
 
 
-/* Header image */
-.header{
-    width: 100%;
-    justify-content: center;
-}
 img{
     margin-top: 13px;
-    align-items: center;
+    vertical-align: top;
     max-width: 100%;
 }

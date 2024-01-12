@@ -1,9 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import styles from './password.module.css'
+import { BiError } from "react-icons/bi";
 
 const Password = () => {
 
+  const [email, setEmail] = useState('');
+  const [characters, setCharacters] = useState('');
   const [captchaText, setCaptchaText] = useState('');
+  const [errorMessageStyle, setErrorMessageStyle] = useState({
+    display: 'none'
+  });
+
+  const [enterEmail, setEnterEmail] = useState({
+    display: 'none',
+    marginTop: '0px',
+    textContent: ''
+  });
+  const [enterCharacters, setEnterCharacters] = useState({
+    display: 'none',
+    marginTop: '0px',
+    textContent: ''
+  });
+
+  let regex_for_email = /\S+@\S+\.\S+/;
+
+
+  // ================= Captcha Start ================== //
 
   const generateCaptcha = () => {
     let randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -18,12 +40,74 @@ const Password = () => {
     // Update the state with the generated captcha text
     setCaptchaText(uniqueChars);
   };
-    useEffect(()=>{
-      generateCaptcha();
-    },[]);
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
 
+  // ================== End =======================  //
+
+  // =============== Error message ================ //
+  const errorCharactersStyle = {
+    lineHeight: '1.4',
+    marginLeft: '5px'
+  }
+
+  // =================== Continue Button start ================== //
+
+  const handleContinue = () => {
+
+    console.log("Continue button working..........");
+    setErrorMessageStyle({ display: 'block' });
+
+    // Email Validation
+    if (email === '' || !regex_for_email.test(email)) {
+      setEnterEmail({
+        display: 'list-item',
+        marginTop: '5px',
+        textContent: email === '' ? 'Enter your email' : 'Enter a valid email address'
+      });
+    } else {
+      setEnterEmail({ display: 'none' });
+      console.log("Email ok");
+    }
+
+    // Characters Validation
+    if (characters === '' || characters !== captchaText) {
+      setEnterCharacters({
+        display: 'list-item',
+        marginTop: '-3px',
+        textContent: 'Enter the characters as they are given in the challenge.'
+      });
+    } else {
+      setEnterCharacters({ display: 'none' });
+    }
+
+    // If both Email and Characters are Valid..
+
+    if (email !== "" && regex_for_email.test(email) && characters !== "" && characters === captchaText){
+      setErrorMessageStyle({ display: 'none' });
+      console.log('ALL IS WELL');
+    }
+  };
   return (
     <>
+      <div className={styles.errorMessage} style={errorMessageStyle}>
+        <div className={styles.errors}>
+          <BiError className={styles.errorIcon} />
+          <p className={styles.alert_para}>There was a problem</p>
+        </div>
+        <ul>
+          <li style={{ display: enterEmail.display }}>
+            <p style={{ textAlign: 'start', marginLeft: '5px' }}>{enterEmail.textContent}</p>
+          </li>
+          <li style={{ display: enterCharacters.display }}>
+            <p style={errorCharactersStyle}>{enterCharacters.textContent}</p>
+          </li>
+        </ul>
+      </div>
+
+      {/* =============== Box ============== */}
+
       <div className={styles.box}>
 
         <h1 className={styles.box_header}>Password assistance</h1>
@@ -32,10 +116,12 @@ const Password = () => {
         <div className={styles.InputEmail}>
           <label htmlFor='email' className={styles.email}>Email</label>
           <input
-            type="text"
+            type="email"
             className={styles.input_email}
             required
-          // value={''}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            disabled={false} // Make sure it is not set to true
           />
         </div>
         <p className={styles.box_header2}>Enter the characters you see</p>
@@ -48,7 +134,7 @@ const Password = () => {
           />
         </div>
         <div className={styles.challengeText}>
-          <div onClick={generateCaptcha} style={{textDecoration: 'underline', cursor : 'pointer'}} className={styles.newChallenge}
+          <div onClick={generateCaptcha} style={{ textDecoration: 'underline', cursor: 'pointer' }} className={styles.newChallenge}
           >See a new challenge <br />
             Hear the challenge</div>
         </div>
@@ -58,13 +144,15 @@ const Password = () => {
             type="text"
             className={styles.characters}
             required
-          // value={''}
+            value={characters}
+            onChange={(e) => setCharacters(e.target.value)}
+            disabled={false}
           />
         </div>
         <a href="{}" class={styles.troubleText}>Having trouble or sight impaired?</a>
 
         {/* Continue button */}
-        <button className={styles.ContinueBtn} type='button' id='continue'>
+        <button onClick={handleContinue} className={styles.ContinueBtn} type='button' id='continue'>
           Continue
         </button>
       </div>
