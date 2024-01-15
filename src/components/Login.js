@@ -55,7 +55,7 @@ const Login = () => {
                 <form action='#' className='user_form'>
                     {/* Email input */}
                     <div className='Input_email'>
-                        <label htmlFor="email" className='email'>Email</label>
+                        <label htmlFor="email" className='email' style={{marginBottom : '1px'}}>Email</label>
                         <input
                             type="text"
                             className='input_email'
@@ -70,7 +70,7 @@ const Login = () => {
                         <Link to="/password" className="password_forgot">
                             Forgot your password?
                         </Link>
-                        <label htmlFor="password" className='password'>Password</label>
+                        <label htmlFor="password" className='password' style={{ marginBottom: '1px' }}>Password</label>
                         <input
                             type="password"
                             className='input_password'
@@ -91,7 +91,7 @@ const Login = () => {
                 {/* Check box */}
                 <div className='check-box'>
                     <input type='checkbox' id='check' name='check' style={{ width: '15px' }} />
-                    <label htmlFor='check'>Keep me signed in.</label>
+                    <label htmlFor='check' style={{fontWeight: '100'}}>Keep me signed in.</label>
                     <div className='details_and_icon'>
                         <a className='details' href='#' onClick={showAlert}>
                             Details

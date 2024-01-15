@@ -1,37 +1,96 @@
 .Box {
-    margin-top: 13px;
-    background-color: rgb(227, 244, 244);
-    border: 1px solid #000;
+    margin-top: 18px;
+    border: 1px solid #a09e9e;
     border-radius: 4px;
     display: inline-block;
-    padding: 16px 16px;
+    padding-left:  20px;
+    padding-right: 25px;
+
 }
 
-.Box h2 {
-    display: inline-block;
-    white-space: nowrap;
-    margin: 0;
-    margin-right: 100px;
-    margin-bottom: 12px;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 1.2;
+.BoxHeader{
+    text-align: left;
+    margin-left: auto;
+    margin-bottom: 15px;
 }
 
-.Box .user_form{
+.user_form{
     align-items: start;
     display: flex;
     flex-direction: column;
 }
-.Box label{
+label{
     font-size: 13px;
     font-weight: bold ;
     margin-bottom: 4px;
 }
 .input{
-    margin-bottom: 10px;
-    width: 40vh;
-    height: 24px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 26px;
     border: 1.5px solid #7d7b7b;
     border-radius: 3px;
 }
+.createAccountBtn{
+    align-items: center;
+    width: 102%;
+    padding: 6.3px;
+    border-color: transparent;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ae4343;
+}
+.boxPara{
+    font-size: 11.6px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 17px;
+}
+.span{
+    font-weight: 100;
+}
+.boxPara2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #7d7b7b;
+}
+.paraLine{
+    width: 85px;
+    height: 0.1px;
+    background-color: #dcdada;
+}
+.AmazonLoginTop {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    border: 0.03px solid #b4b1b1;
+    text-shadow: 0 0 1px;
+    border-radius: 4px;
+    align-items: center;
+    padding: 6px 10px 5px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(rgb(250, 248, 248) 50%, rgb(229, 229, 229) 70%);
+}
+.boxLine{
+    margin-bottom: 13px;
+    width: 100%;
+    height: 1.7px;
+    background-image: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(222, 226, 226) 25%, rgb(227, 227, 227) 75%, rgb(255, 255, 255) 100%);
+    opacity: 0.8;
+}
+.boxLastPara{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 13px;
+}
+
+
+
