@@ -1,17 +1,50 @@
+.errorsMessage{
+    background-color: transparent;
+    border: 1px solid #ae4343;
+    border-radius: 4px;
+    margin-top: 18px;
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+
+.errorsHeading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #c03636;
+    margin-top: -5px;
+    margin-left: 16px;
+    margin-bottom: 2px;
+    font-size: 17px;
+    gap: 10px;
+}
+ul{
+    margin-left: 34px;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+li{
+    margin-bottom: -6px;
+    display: list-item;
+    padding-left: 4px;
+}
 .Box {
     margin-top: 18px;
     border: 1px solid #a09e9e;
     border-radius: 4px;
     display: inline-block;
     padding-left:  20px;
-    padding-right: 25px;
+    padding-right: 32px;
 
 }
 
 .BoxHeader{
     text-align: left;
     margin-left: auto;
-    margin-bottom: 15px;
+    margin-top: 14px;
+    margin-bottom: 17.5px;
 }
 
 .user_form{
@@ -26,14 +59,17 @@ label{
 }
 .input{
     margin-bottom: 15px;
-    width: 100%;
+    width: 102%;
     height: 26px;
     border: 1.5px solid #7d7b7b;
     border-radius: 3px;
 }
+input::placeholder{
+    padding-left: 5px;
+}
 .createAccountBtn{
     align-items: center;
-    width: 102%;
+    width: 104%;
     padding: 6.3px;
     border-color: transparent;
     border-radius: 4px;

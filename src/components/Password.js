@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import styles from './password.module.css'
+import React, { useEffect, useState } from 'react';
 import { BiError } from "react-icons/bi";
+import styles from './password.module.css';
 
 const Password = () => {
 
@@ -84,7 +84,7 @@ const Password = () => {
 
     // If both Email and Characters are Valid..
 
-    if (email !== "" && regex_for_email.test(email) && characters !== "" && characters === captchaText){
+    if (email !== "" && regex_for_email.test(email) && characters !== "" && characters === captchaText) {
       setErrorMessageStyle({ display: 'none' });
       console.log('ALL IS WELL');
     }
@@ -149,10 +149,10 @@ const Password = () => {
             disabled={false}
           />
         </div>
-        <a href="{}" class={styles.troubleText}>Having trouble or sight impaired?</a>
+        <div class={styles.troubleText}>Having trouble or sight impaired?</div>
 
         {/* Continue button */}
-        <button onClick={handleContinue} className={styles.ContinueBtn} type='button' id='continue'>
+        <button onClick={handleContinue} className={styles.ContinueBtn}>
           Continue
         </button>
       </div>
