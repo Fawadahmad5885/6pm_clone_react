@@ -13,12 +13,10 @@ const Password = () => {
 
   const [enterEmail, setEnterEmail] = useState({
     display: 'none',
-    marginTop: '0px',
     textContent: ''
   });
   const [enterCharacters, setEnterCharacters] = useState({
     display: 'none',
-    marginTop: '0px',
     textContent: ''
   });
 
@@ -47,10 +45,6 @@ const Password = () => {
   // ================== End =======================  //
 
   // =============== Error message ================ //
-  const errorCharactersStyle = {
-    lineHeight: '1.4',
-    marginLeft: '5px'
-  }
 
   // =================== Continue Button start ================== //
 
@@ -63,7 +57,6 @@ const Password = () => {
     if (email === '' || !regex_for_email.test(email)) {
       setEnterEmail({
         display: 'list-item',
-        marginTop: '5px',
         textContent: email === '' ? 'Enter your email' : 'Enter a valid email address'
       });
     } else {
@@ -75,7 +68,6 @@ const Password = () => {
     if (characters === '' || characters !== captchaText) {
       setEnterCharacters({
         display: 'list-item',
-        marginTop: '-3px',
         textContent: 'Enter the characters as they are given in the challenge.'
       });
     } else {
@@ -97,12 +89,8 @@ const Password = () => {
           <p className={styles.alert_para}>There was a problem</p>
         </div>
         <ul>
-          <li style={{ display: enterEmail.display }}>
-            <p style={{ textAlign: 'start', marginLeft: '5px' }}>{enterEmail.textContent}</p>
-          </li>
-          <li style={{ display: enterCharacters.display }}>
-            <p style={errorCharactersStyle}>{enterCharacters.textContent}</p>
-          </li>
+          <li style={{ display: enterEmail.display,marginBottom: '-20px' }}><p>{enterEmail.textContent}</p></li>
+          <li style={{ display: enterCharacters.display }}><p>{enterCharacters.textContent}</p></li>
         </ul>
       </div>
 

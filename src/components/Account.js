@@ -16,13 +16,11 @@ const Account = () => {
 
   const [enterName, setEnterName] = useState({
     display: 'none',
-    // marginTop: '0px',
     textContent: ''
   });
 
   const [enterEmail, setEnterEmail] = useState({
     display: 'none',
-    // marginTop: '0px',
     textContent: ''
   });
 
@@ -38,7 +36,8 @@ const Account = () => {
     event.preventDefault();
     // console.log('handleCreateAccount() function is working');
     setErrorMessagesStyles({
-      display: 'block'
+      display: 'block',
+      marginBottom: '-5px'
     });
 
 
@@ -89,8 +88,8 @@ const Account = () => {
           <p className={styles.alertPara}>There was a problem</p>
         </div>
         <ul>
-          <li style={{ display: enterName.display }}><p>{enterName.textContent}</p></li>
-          <li style={{ display: enterEmail.display }}><p>{enterEmail.textContent}</p></li>
+          <li style={{ display: enterName.display, marginBottom: '-18px' }}><p>{enterName.textContent}</p></li>
+          <li style={{ display: enterEmail.display, marginBottom: '-18px' }}><p>{enterEmail.textContent}</p></li>
           <li style={{ display: enterPassword.display }}><p>{enterPassword.textContent}</p></li>
         </ul>
 
